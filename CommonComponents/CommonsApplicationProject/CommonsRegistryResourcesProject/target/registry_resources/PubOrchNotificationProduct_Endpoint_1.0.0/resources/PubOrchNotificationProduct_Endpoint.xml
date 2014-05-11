@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint xmlns="http://ws.apache.org/ns/synapse">
+    <wsdl service="PubOrchNotificationProducts" port="PubOrchNotificationProductsPort" uri="http://localhost:9765/services/PubOrchNotificationProducts?wsdl"/>
+</endpoint>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint xmlns="http://ws.apache.org/ns/synapse" name="GenericFileService_FTP_Endpoint">
+    <address uri="vfs:ftp://ftpuser:123456@localhost/upload?vfs.passive=true" format="pox"/>
+</endpoint>

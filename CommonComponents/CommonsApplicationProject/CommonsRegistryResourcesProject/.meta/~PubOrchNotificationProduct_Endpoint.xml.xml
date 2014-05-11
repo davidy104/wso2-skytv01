@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><resource name="PubOrchNotificationProduct_Endpoint.xml" isCollection="false" path="/_system/governance/endpoints//CommonsRegistryResourcesProject/PubOrchNotificationProduct_Endpoint.xml" registryUrl="https://localhost:9443/registry" md5="157380d3848aed1cbc7039409e861c35">
+    <mediaType>application/vnd.wso2.esb.endpoint</mediaType>
+    <version>1844</version>
+    <creator>admin</creator>
+    <createdTime>1397536468427</createdTime>
+    <lastUpdater>admin</lastUpdater>
+    <lastModified>1397536468427</lastModified>
+    <registryState>1</registryState>
+    <description/>
+</resource>

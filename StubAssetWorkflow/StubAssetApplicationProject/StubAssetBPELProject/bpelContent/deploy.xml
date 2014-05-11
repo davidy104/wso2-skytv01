@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy xmlns="http://www.apache.org/ode/schemas/dd/2007/03" xmlns:sample="http://process.skytv.co.nz/puborch-extracttitles/v1" xmlns:v1="http://service.skytv.co.nz/ibms/v1" xmlns:v1_1="http://service.skytv.co.nz/puborch-transform/v1" xmlns:v1_2="https://service.skytv.co.nz/puborch-fileService/v1" xmlns:v1_3="http://service.skytv.co.nz/monitor-utility/v1">
+  <process name="sample:StubAssetProcess">
+    <active>true</active>
+    <retired>false</retired>
+    <process-events generate="all"/>
+    <provide partnerLink="client">
+      <service name="sample:StubAssetProcess" port="StubAssetProcessPort"/>
+    </provide>
+    <invoke partnerLink="ibmsServicePL">
+      <service name="v1:StubAssetIbmsService" port="SOAP11Endpoint"/>
+    </invoke>
+    <invoke partnerLink="mpxTransformPL">
+      <service name="v1_1:StubAssetMpxTransformService" port="StubAssetMpxTransformServiceHttpSoap11Endpoint"/>
+    </invoke>
+    <invoke partnerLink="fileServicePL">
+      <service name="v1_2:GenericFileService" port="GenericFileServiceHttpSoap11Endpoint"/>
+    </invoke>
+    <invoke partnerLink="monitorPL">
+      <service name="v1_3:MonitorUtilityService" port="MonitorUtilityServiceHttpSoap11Endpoint"/>
+    </invoke>
+  </process>
+</deploy>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:ns1="https://service.skytv.co.nz/puborch-fileService/v1"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	name="FileService" targetNamespace="https://service.skytv.co.nz/puborch-fileService/v1">
+	<wsdl:types>
+		<xsd:schema targetNamespace="https://service.skytv.co.nz/puborch-fileService/v1">
+			<xsd:element name="SendToFileServiceRequest">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="fileName" type="xsd:string" />
+						<xsd:element name="destination" type="xsd:string" />
+						<xsd:element name="contents" type="xsd:string" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="SendToFileServiceResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="result" type="xsd:string" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="SendFileFault">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="SendFileFault" type="xsd:string">
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+	</wsdl:types>
+
+	<wsdl:message name="SendToFileServiceRequest">
+		<wsdl:part element="ns1:SendToFileServiceRequest" name="parameters" />
+	</wsdl:message>
+
+	<wsdl:message name="SendToFileServiceResponse">
+		<wsdl:part element="ns1:SendToFileServiceResponse" name="parameters" />
+	</wsdl:message>
+
+	<wsdl:message name="SendFileFault">
+		<wsdl:part name="parameters" element="ns1:SendFileFault"></wsdl:part>
+	</wsdl:message>
+	<wsdl:portType name="FileServicePortType">
+		<wsdl:operation name="SendFile">
+			<wsdl:input message="ns1:SendToFileServiceRequest" />
+			<wsdl:output message="ns1:SendToFileServiceResponse" />
+			<wsdl:fault name="fault" message="ns1:SendFileFault"></wsdl:fault>
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:binding name="FileServiceSOAPBinding" type="ns1:FileServicePortType">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="SendFile">
+			<soap:operation
+				soapAction="https://service.skytv.co.nz/puborch-fileService/v1/SendFile" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="FileService">
+		<wsdl:port binding="ns1:FileServiceSOAPBinding" name="FileServiceSOAPPort">
+			<soap:address location="http://esb.skytv.co.nz/service/FileService" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:esb="http:///org/wso2/developerstudio/eclipse/gmf/esb" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_ab37kNfzEeOUpbOMsTXMhA" type="Esb" name="localentry_Certifications.esb_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_avFLcNfzEeOUpbOMsTXMhA" type="2001">
+    <children xmi:type="notation:DecorationNode" xmi:id="_avFygNfzEeOUpbOMsTXMhA" type="7001">
+      <children xmi:type="notation:Node" xmi:id="_ayFcINfzEeOUpbOMsTXMhA" type="3663">
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_ayFcIdfzEeOUpbOMsTXMhA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_ayFcItfzEeOUpbOMsTXMhA" fontName="Ubuntu"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_ayFcI9fzEeOUpbOMsTXMhA"/>
+        <element xmi:type="esb:LocalEntry" href="localentry_Certifications.esb#//@server/@children.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ayFcJNfzEeOUpbOMsTXMhA" width="75" height="75"/>
+      </children>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_avFLcdfzEeOUpbOMsTXMhA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_avFLctfzEeOUpbOMsTXMhA" fontName="Ubuntu"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_avFLc9fzEeOUpbOMsTXMhA"/>
+    <element xmi:type="esb:EsbServer" href="localentry_Certifications.esb#//@server"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_avFLdNfzEeOUpbOMsTXMhA"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_ab37kdfzEeOUpbOMsTXMhA"/>
+  <element xmi:type="esb:EsbDiagram" href="localentry_Certifications.esb#/"/>
+</notation:Diagram>

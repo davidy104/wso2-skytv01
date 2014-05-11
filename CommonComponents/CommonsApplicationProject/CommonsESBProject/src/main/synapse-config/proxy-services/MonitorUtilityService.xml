@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse" name="MonitorUtilityService" transports="http https" startOnLoad="true" trace="disable">
+    <target>
+        <inSequence>
+            <log level="full">
+                <property name="MonitorUtilityService" value="Monitor"/>
+            </log>
+            <property xmlns:ns2="http://model.skytv.co.nz/monitor-utility/v1" xmlns:ns1="http://service.skytv.co.nz/monitor-utility/v1" name="dateTime" expression="//ns1:Monitor/ns2:MonitorRecord/ns2:dateTime" scope="default" type="STRING"/>
+            <property xmlns:ns2="http://model.skytv.co.nz/monitor-utility/v1" xmlns:ns1="http://service.skytv.co.nz/monitor-utility/v1" name="serviceName" expression="//ns1:Monitor/ns2:MonitorRecord/ns2:serviceName" scope="default" type="STRING"/>
+            <property name="filename" expression="fn:concat(fn:concat(get-property('serviceName'), get-property('dateTime')),'.xml')" scope="default" type="STRING"/>
+            <sequence key="MonitorUtilityService_InSequence"/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </target>
+    <publishWSDL key="gov:/wsdl/MonitorUtilityService_Wsdl.wsdl"/>
+</proxy>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:ns1="http://service.skytv.co.nz/puborch-transform/v1" xmlns:ns2="http://model.skytv.co.nz/vod/v1"
+	xmlns:sky="http://xml.theplatform.com/media/data/sky" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"
+	name="StubAssetMpxTransformService" targetNamespace="http://service.skytv.co.nz/puborch-transform/v1">
+
+	<wsdl:types>
+		<xs:schema targetNamespace="http://service.skytv.co.nz/puborch-transform/v1">
+			<xs:import namespace="http://model.skytv.co.nz/vod/v1" />
+			<xs:import namespace="http://xml.theplatform.com/media/data/sky" />
+
+			<xs:element name="TransformRequest" type="ns1:TransformRequest" />
+			<xs:complexType name="TransformRequest">
+				<xs:sequence>
+					<xs:element name="fromType" type="xs:string" />
+					<xs:element name="toType" type="xs:string" />
+					<xs:element name="source">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element minOccurs="0" maxOccurs="unbounded" ref="ns2:Title" />
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:element name="TransformResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="rss" form="unqualified">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="channel" form="unqualified">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element maxOccurs="unbounded" name="item"
+													form="unqualified">
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="title" form="unqualified"
+																type="xs:string" />
+															<xs:element name="description" form="unqualified"
+																type="xs:string" />
+															<xs:element ref="sky:skyID" />
+															<xs:element ref="sky:seasonID" />
+															<xs:element ref="sky:seasonTitle" />
+															<xs:element ref="sky:seasonNumber" />
+															<xs:element ref="sky:episodeNumber" />
+															<xs:element ref="sky:credits" />
+															<xs:element ref="sky:studio" />
+															<xs:element ref="sky:contentProviderID" />
+															<xs:element ref="sky:contractID" />
+															<xs:element ref="sky:programType" />
+															<xs:element ref="sky:releaseYear" />
+															<xs:element ref="sky:state" />
+														</xs:sequence>
+													</xs:complexType>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+								<xs:attribute name="version" use="required" type="xs:decimal" />
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:schema>
+
+		<xs:schema elementFormDefault="qualified"
+			targetNamespace="http://model.skytv.co.nz/vod/v1">
+			<xs:element name="Title" type="ns2:Title" />
+			<xs:complexType name="Title">
+				<xs:sequence>
+					<xs:element name="titleId" type="xs:long" />
+					<xs:element name="title" type="xs:string" />
+					<xs:element name="episodeNumber" type="xs:long" />
+					<xs:element name="yearOfProduction" type="xs:long" />
+					<xs:element name="type" type="xs:string" />
+					<xs:element name="distributor" type="xs:string" />
+					<xs:element name="contentProviderId" type="xs:long" />
+					<xs:element name="state" type="xs:integer" />
+					<xs:element name="seriesId" type="xs:long" />
+					<xs:element name="seriesName" type="xs:string" />
+					<xs:element name="seriesYear" type="xs:string" />
+					<xs:element name="synopsis" type="xs:string" />
+					<xs:element ref="ns2:casts" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="casts" type="ns2:casts" />
+			<xs:complexType name="casts">
+				<xs:sequence>
+					<xs:element minOccurs="0" ref="ns2:cast" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="cast" type="ns2:cast" />
+			<xs:complexType name="cast">
+				<xs:sequence>
+					<xs:element name="castId" type="xs:long" />
+					<xs:element name="roleId" type="xs:long" />
+					<xs:element name="roleName" type="xs:string" />
+					<xs:element name="firstName" type="xs:string" />
+					<xs:element name="lastName" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+		</xs:schema>
+
+
+
+
+
+		<xs:schema targetNamespace="http://xml.theplatform.com/media/data/sky"
+			xmlns:sky="http://xml.theplatform.com/media/data/sky" xmlns:ns1="http://service.skytv.co.nz/puborch-transform/v1">
+			<xs:import namespace="http://service.skytv.co.nz/puborch-transform/v1" />
+			<xs:element name="skyID" type="xs:string" />
+			<xs:element name="seasonID" type="xs:long" />
+			<xs:element name="seasonTitle" type="xs:string" />
+			<xs:element name="seasonNumber" type="xs:long" />
+			<xs:element name="episodeNumber">
+				<xs:complexType />
+			</xs:element>
+			<xs:element name="credits">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element maxOccurs="unbounded" name="credit" form="unqualified">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="last" form="unqualified" type="xs:string" />
+									<xs:element name="first" form="unqualified" type="xs:string" />
+									<xs:element name="role" form="unqualified" type="xs:string" />
+								</xs:sequence>
+								<xs:attribute name="creditID" use="required" type="xs:long" />
+								<xs:attribute name="personId" use="required" type="xs:long" />
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="studio" type="xs:string" />
+			<xs:element name="contentProviderID" type="xs:long" />
+			<xs:element name="contractID" type="xs:long" />
+			<xs:element name="programType" type="xs:string" />
+			<xs:element name="releaseYear" type="xs:integer" />
+			<xs:element name="state" type="xs:integer" />
+		</xs:schema>
+
+	</wsdl:types>
+
+	<wsdl:message name="TransformRequest">
+		<wsdl:part element="ns1:TransformRequest" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="TransformResponse">
+		<wsdl:part element="ns1:TransformResponse" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+
+	<wsdl:portType name="StubAssetMpxTransformPortType">
+		<wsdl:operation name="Transform">
+			<wsdl:documentation>This operation transforms an XML in to another
+				format, it takes a in format and and out and then applies
+				an XSLT to
+				it, to generate the output.
+			</wsdl:documentation>
+			<wsdl:input message="ns1:TransformRequest" wsaw:Action="urn:Transform" />
+			<wsdl:output message="ns1:TransformResponse" wsaw:Action="urn:Transform" />
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:binding name="StubAssetMpxTransformSOAPBinding"
+		type="ns1:StubAssetMpxTransformPortType">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="Transform">
+			<soap:operation soapAction="urn:Transform" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:service name="StubAssetMpxTransformService">
+		<wsdl:port binding="ns1:StubAssetMpxTransformSOAPBinding"
+			name="StubAssetMpxTransformSOAPPort">
+			<soap:address
+				location="http://esb.skytv.co.nz/service/StubAssetMpxTransformService" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

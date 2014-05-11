@@ -1,0 +1,8 @@
+<serviceGroup>
+	<service name="StubAssetIbmsService">
+		<transports>
+			<transport>https</transport>
+			<transport>http</transport>
+		</transports>
+	</service>
+</serviceGroup>

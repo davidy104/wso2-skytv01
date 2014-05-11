@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="GenericFileService_Ftp_InSequence">
+    <log>
+        <property name="filename" expression="get-property('filename')"/>
+    </log>
+    <property name="transport.vfs.ReplyFileName" expression="get-property('filename')" scope="transport" type="STRING"/>
+    <property name="transport.vfs.Streaming" value="true" scope="default" type="STRING"/>
+    <property name="transport.vfs.ContentType" value="text/xml" scope="default" type="STRING"/>
+    <send>
+        <endpoint key="gov:endpoints/GenericFileService_FTP_Endpoint.xml"/>
+    </send>
+</sequence>

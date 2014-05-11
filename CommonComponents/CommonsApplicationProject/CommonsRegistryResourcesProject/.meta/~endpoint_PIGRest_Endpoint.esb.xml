@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><resource name="endpoint_PIGRest_Endpoint.esb" isCollection="false" path="/_system/governance/endpoints//CommonsRegistryResourcesProject/endpoint_PIGRest_Endpoint.esb" registryUrl="https://localhost:9443/registry" md5="bf759263a1c51ebcad5932acdda38b87">
+    <mediaType>null</mediaType>
+    <version>1844</version>
+    <creator>admin</creator>
+    <createdTime>1398140921058</createdTime>
+    <lastUpdater>admin</lastUpdater>
+    <lastModified>1398140921058</lastModified>
+    <registryState>1</registryState>
+    <description/>
+</resource>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://process.skytv.co.nz/puborch-extracttitles/v1"
+	xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:wsdl="http://service.skytv.co.nz/ibms/v1"
+	xmlns:wsdl1="http://service.skytv.co.nz/puborch-transform/v1"
+	xmlns:wsdl2="https://service.skytv.co.nz/puborch-fileService/v1"
+	xmlns:wsdl3="http://service.skytv.co.nz/monitor-utility/v1" name="StubAssetProcess"
+	targetNamespace="http://process.skytv.co.nz/puborch-extracttitles/v1">
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+		TYPE DEFINITION - List of types participating in this BPEL process The BPEL 
+		Designer will generate default request and response types but you can define 
+		or import any XML Schema type and use them as part of the message types. 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<plnk:partnerLinkType name="ibmsServicePLType">
+		<plnk:role name="ibmsServiceRole" portType="wsdl:StubAssetIbmsServicePortType" />
+	</plnk:partnerLinkType>
+	<plnk:partnerLinkType name="mpxTransformPLType">
+		<plnk:role name="mpxTransformRole" portType="wsdl1:StubAssetMpxTransformServicePortType" />
+	</plnk:partnerLinkType>
+	<plnk:partnerLinkType name="fileServicePLType">
+		<plnk:role name="fileServiceRole" portType="wsdl2:GenericFileServicePortType" />
+	</plnk:partnerLinkType>
+	<plnk:partnerLinkType name="monitorPLType">
+		<plnk:role name="monitorRole" portType="wsdl3:MonitorUtilityServicePortType" />
+	</plnk:partnerLinkType>
+	<import location="StubAssetIbmsService.wsdl" namespace="http://service.skytv.co.nz/ibms/v1" />
+	<import location="StubAssetMpxTransformService.wsdl"
+		namespace="http://service.skytv.co.nz/puborch-transform/v1" />
+	<import location="GenericFileService.wsdl"
+		namespace="https://service.skytv.co.nz/puborch-fileService/v1" />
+	<import location="MonitorUtilityService.wsdl" namespace="http://service.skytv.co.nz/monitor-utility/v1" />
+	<types>
+		<schema xmlns="http://www.w3.org/2001/XMLSchema"
+			attributeFormDefault="unqualified" elementFormDefault="qualified"
+			targetNamespace="http://process.skytv.co.nz/puborch-extracttitles/v1">
+
+			<element name="ExtractTitles">
+				<complexType>
+					<sequence>
+						<element name="titleId" type="double" />
+					</sequence>
+				</complexType>
+			</element>
+		</schema>
+	</types>
+
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+		MESSAGE TYPE DEFINITION - Definition of the message types used as part of 
+		the port type defintions ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<message name="ExtractTitlesMessage">
+		<part element="tns:ExtractTitles" name="payload" />
+	</message>
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+		PORT TYPE DEFINITION - A port type groups a set of operations into a logical 
+		service unit. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+	<!-- portType implemented by the StubAssetProcess BPEL process -->
+	<portType name="StubAssetProcess">
+		<operation name="process">
+			<input message="tns:ExtractTitlesMessage" />
+		</operation>
+	</portType>
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+		PARTNER LINK TYPE DEFINITION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<plnk:partnerLinkType name="StubAssetProcess">
+		<plnk:role name="StubAssetProcessProvider" portType="tns:StubAssetProcess" />
+	</plnk:partnerLinkType>
+
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+		BINDING DEFINITION - Defines the message format and protocol details for 
+		a web service. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<binding name="StubAssetProcessBinding" type="tns:StubAssetProcess">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<operation name="process">
+			<soap:operation
+				soapAction="http://process.skytv.co.nz/puborch-extracttitles/v1/process" />
+			<input>
+				<soap:body use="literal" />
+			</input>
+			<output>
+				<soap:body use="literal" />
+			</output>
+		</operation>
+	</binding>
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+		SERVICE DEFINITION - A service groups a set of ports into a service unit. 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<service name="StubAssetProcess">
+		<port binding="tns:StubAssetProcessBinding" name="StubAssetProcessPort">
+			<soap:address location="http://bps.skytv.co.nz:8080/StubAssetProcess" />
+		</port>
+	</service>
+</definitions>

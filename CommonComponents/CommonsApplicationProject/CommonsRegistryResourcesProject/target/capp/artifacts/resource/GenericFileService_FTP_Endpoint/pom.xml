@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>co.nz.skytv.CommonsRegistryResourcesProject.resource</groupId>
+  <artifactId>GenericFileService_FTP_Endpoint</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>registry/resource</packaging>
+  <name>GenericFileService_FTP_Endpoint</name>
+  <description>GenericFileService_FTP_Endpoint</description>
+  <repositories>
+    <repository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>central</id>
+      <name>Central Repository</name>
+      <url>http://repo.maven.apache.org/maven2</url>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>central</id>
+      <name>Central Repository</name>
+      <url>http://repo.maven.apache.org/maven2</url>
+    </pluginRepository>
+  </pluginRepositories>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.wso2.maven</groupId>
+        <artifactId>maven-registry-plugin</artifactId>
+        <version>2.0.5</version>
+        <extensions>true</extensions>
+        <configuration>
+          <artifact>registry-info.xml</artifact>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

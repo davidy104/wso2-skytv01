@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint xmlns="http://ws.apache.org/ns/synapse" name="ADIHTTP_Endpoint">
+    <address uri="http://localhost:9763/ADISystemRESTProject_1.0.0/services/a_d_i_system/adipackage/adixml" format="rest"/>
+</endpoint>

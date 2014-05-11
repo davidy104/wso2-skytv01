@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="GenericFaultHandle_Sequence">
+    <log level="custom">
+        <property name="MSG" value="==== FAULT CREATED ==="/>
+    </log>
+    <makefault version="soap12">
+        <code xmlns:soap12Env="http://www.w3.org/2003/05/soap-envelope" value="soap12Env:VersionMismatch"/>
+        <reason xmlns:ns="http://org.apache.synapse/xsd" expression="get-property('ERROR_MESSAGE')"/>
+        <detail expression="get-property('customErrorDetail')"/>
+    </makefault>
+    <send/>
+</sequence>

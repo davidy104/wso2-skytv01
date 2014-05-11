@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:esb="http:///org/wso2/developerstudio/eclipse/gmf/esb" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_3jPTUNfzEeOUpbOMsTXMhA" type="Esb" name="sequence_GenericFaultHandle_Sequence.esb_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_3ms3ANfzEeOUpbOMsTXMhA" type="2001">
+    <children xmi:type="notation:DecorationNode" xmi:id="_3mteENfzEeOUpbOMsTXMhA" type="7001">
+      <children xmi:type="notation:Node" xmi:id="_3n5w4NfzEeOUpbOMsTXMhA" type="3614">
+        <children xmi:type="notation:Node" xmi:id="_3n6_ANfzEeOUpbOMsTXMhA" type="3615">
+          <children xmi:type="notation:DecorationNode" xmi:id="_3n7mENfzEeOUpbOMsTXMhA" type="7035">
+            <children xmi:type="notation:Node" xmi:id="_3oDh4NfzEeOUpbOMsTXMhA" type="3495">
+              <children xmi:type="notation:DecorationNode" xmi:id="_3oDh5dfzEeOUpbOMsTXMhA" type="5168"/>
+              <children xmi:type="notation:Node" xmi:id="_3oFXENfzEeOUpbOMsTXMhA" type="3018">
+                <styles xmi:type="notation:DescriptionStyle" xmi:id="_3oFXEdfzEeOUpbOMsTXMhA"/>
+                <styles xmi:type="notation:FontStyle" xmi:id="_3oFXEtfzEeOUpbOMsTXMhA" fontName="Ubuntu"/>
+                <styles xmi:type="notation:LineStyle" xmi:id="_3oFXE9fzEeOUpbOMsTXMhA"/>
+                <element xmi:type="esb:LogMediatorInputConnector" href="sequence_GenericFaultHandle_Sequence.esb#//@server/@children.0/@mediatorFlow/@children.0/@inputConnector"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3oFXFNfzEeOUpbOMsTXMhA" x="-6" y="-5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_3oFXFdfzEeOUpbOMsTXMhA" type="3019">
+                <styles xmi:type="notation:DescriptionStyle" xmi:id="_3oFXFtfzEeOUpbOMsTXMhA"/>
+                <styles xmi:type="notation:FontStyle" xmi:id="_3oFXF9fzEeOUpbOMsTXMhA" fontName="Ubuntu"/>
+                <styles xmi:type="notation:LineStyle" xmi:id="_3oFXGNfzEeOUpbOMsTXMhA"/>
+                <element xmi:type="esb:LogMediatorOutputConnector" href="sequence_GenericFaultHandle_Sequence.esb#//@server/@children.0/@mediatorFlow/@children.0/@outputConnector"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3oFXGdfzEeOUpbOMsTXMhA" x="-11" y="-9"/>
+              </children>
+              <styles xmi:type="notation:DescriptionStyle" xmi:id="_3oDh4dfzEeOUpbOMsTXMhA"/>
+              <styles xmi:type="notation:FontStyle" xmi:id="_3oDh4tfzEeOUpbOMsTXMhA" fontName="Ubuntu"/>
+              <styles xmi:type="notation:LineStyle" xmi:id="_3oDh49fzEeOUpbOMsTXMhA"/>
+              <element xmi:type="esb:LogMediator" href="sequence_GenericFaultHandle_Sequence.esb#//@server/@children.0/@mediatorFlow/@children.0"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3oDh5NfzEeOUpbOMsTXMhA" x="26" y="109" width="77" height="75"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_3oQ9QNfzEeOUpbOMsTXMhA" type="3509">
+              <children xmi:type="notation:DecorationNode" xmi:id="_3oQ9RdfzEeOUpbOMsTXMhA" type="5176"/>
+              <children xmi:type="notation:Node" xmi:id="_3ocjcNfzEeOUpbOMsTXMhA" type="3067">
+                <styles xmi:type="notation:DescriptionStyle" xmi:id="_3ocjcdfzEeOUpbOMsTXMhA"/>
+                <styles xmi:type="notation:FontStyle" xmi:id="_3ocjctfzEeOUpbOMsTXMhA" fontName="Ubuntu"/>
+                <styles xmi:type="notation:LineStyle" xmi:id="_3ocjc9fzEeOUpbOMsTXMhA"/>
+                <element xmi:type="esb:FaultMediatorInputConnector" href="sequence_GenericFaultHandle_Sequence.esb#//@server/@children.0/@mediatorFlow/@children.1/@inputConnector"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3ocjdNfzEeOUpbOMsTXMhA" x="-6" y="-5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_3odKgNfzEeOUpbOMsTXMhA" type="3068">
+                <styles xmi:type="notation:DescriptionStyle" xmi:id="_3odKgdfzEeOUpbOMsTXMhA"/>
+                <styles xmi:type="notation:FontStyle" xmi:id="_3odKgtfzEeOUpbOMsTXMhA" fontName="Ubuntu"/>
+                <styles xmi:type="notation:LineStyle" xmi:id="_3odKg9fzEeOUpbOMsTXMhA"/>
+                <element xmi:type="esb:FaultMediatorOutputConnector" href="sequence_GenericFaultHandle_Sequence.esb#//@server/@children.0/@mediatorFlow/@children.1/@outputConnector"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3odKhNfzEeOUpbOMsTXMhA" x="-11" y="-9"/>
+              </children>
+              <styles xmi:type="notation:DescriptionStyle" xmi:id="_3oQ9QdfzEeOUpbOMsTXMhA"/>
+              <styles xmi:type="notation:FontStyle" xmi:id="_3oQ9QtfzEeOUpbOMsTXMhA" fontName="Ubuntu"/>
+              <styles xmi:type="notation:LineStyle" xmi:id="_3oQ9Q9fzEeOUpbOMsTXMhA"/>
+              <element xmi:type="esb:FaultMediator" href="sequence_GenericFaultHandle_Sequence.esb#//@server/@children.0/@mediatorFlow/@children.1"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3oQ9RNfzEeOUpbOMsTXMhA" x="142" y="109" width="77" height="75"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_3otCINfzEeOUpbOMsTXMhA" type="3515">
+              <children xmi:type="notation:Node" xmi:id="_3ouQQNfzEeOUpbOMsTXMhA" type="3085">
+                <styles xmi:type="notation:DescriptionStyle" xmi:id="_3ouQQdfzEeOUpbOMsTXMhA"/>
+                <styles xmi:type="notation:FontStyle" xmi:id="_3ouQQtfzEeOUpbOMsTXMhA" fontName="Ubuntu"/>
+                <styles xmi:type="notation:LineStyle" xmi:id="_3ouQQ9fzEeOUpbOMsTXMhA"/>
+                <element xmi:type="esb:SendMediatorInputConnector" href="sequence_GenericFaultHandle_Sequence.esb#//@server/@children.0/@mediatorFlow/@children.2/@InputConnector"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3ouQRNfzEeOUpbOMsTXMhA" x="-6" y="-5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_3ouQRdfzEeOUpbOMsTXMhA" type="3086">
+                <styles xmi:type="notation:DescriptionStyle" xmi:id="_3ouQRtfzEeOUpbOMsTXMhA"/>
+                <styles xmi:type="notation:FontStyle" xmi:id="_3ouQR9fzEeOUpbOMsTXMhA" fontName="Ubuntu"/>
+                <styles xmi:type="notation:LineStyle" xmi:id="_3ouQSNfzEeOUpbOMsTXMhA"/>
+                <element xmi:type="esb:SendMediatorOutputConnector" href="sequence_GenericFaultHandle_Sequence.esb#//@server/@children.0/@mediatorFlow/@children.2/@OutputConnector"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3ouQSdfzEeOUpbOMsTXMhA" x="-11" y="-9"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_3ou3UNfzEeOUpbOMsTXMhA" type="3539">
+                <styles xmi:type="notation:DescriptionStyle" xmi:id="_3ou3UdfzEeOUpbOMsTXMhA"/>
+                <styles xmi:type="notation:FontStyle" xmi:id="_3ou3UtfzEeOUpbOMsTXMhA" fontName="Ubuntu"/>
+                <styles xmi:type="notation:LineStyle" xmi:id="_3ou3U9fzEeOUpbOMsTXMhA"/>
+                <element xmi:type="esb:SendMediatorEndpointOutputConnector" href="sequence_GenericFaultHandle_Sequence.esb#//@server/@children.0/@mediatorFlow/@children.2/@endpointOutputConnector"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3ou3VNfzEeOUpbOMsTXMhA"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_3ou3VdfzEeOUpbOMsTXMhA" type="3728">
+                <children xmi:type="notation:DecorationNode" xmi:id="_3ou3WtfzEeOUpbOMsTXMhA" type="7046">
+                  <styles xmi:type="notation:TitleStyle" xmi:id="_3ou3W9fzEeOUpbOMsTXMhA" showTitle="true"/>
+                </children>
+                <styles xmi:type="notation:DescriptionStyle" xmi:id="_3ou3VtfzEeOUpbOMsTXMhA"/>
+                <styles xmi:type="notation:FontStyle" xmi:id="_3ou3V9fzEeOUpbOMsTXMhA" fontName="Ubuntu"/>
+                <styles xmi:type="notation:LineStyle" xmi:id="_3ou3WNfzEeOUpbOMsTXMhA"/>
+                <element xmi:type="esb:MediatorFlow" href="sequence_GenericFaultHandle_Sequence.esb#//@server/@children.0/@mediatorFlow/@children.2/@mediatorFlow"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3ou3WdfzEeOUpbOMsTXMhA"/>
+              </children>
+              <styles xmi:type="notation:DescriptionStyle" xmi:id="_3otCIdfzEeOUpbOMsTXMhA"/>
+              <styles xmi:type="notation:FontStyle" xmi:id="_3otCItfzEeOUpbOMsTXMhA" fontName="Ubuntu"/>
+              <styles xmi:type="notation:LineStyle" xmi:id="_3otCI9fzEeOUpbOMsTXMhA"/>
+              <element xmi:type="esb:SendMediator" href="sequence_GenericFaultHandle_Sequence.esb#//@server/@children.0/@mediatorFlow/@children.2"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3otCJNfzEeOUpbOMsTXMhA" x="259" y="109" width="170" height="100"/>
+            </children>
+            <styles xmi:type="notation:TitleStyle" xmi:id="_3n7mEdfzEeOUpbOMsTXMhA" showTitle="true"/>
+          </children>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_3n6_AdfzEeOUpbOMsTXMhA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_3n6_AtfzEeOUpbOMsTXMhA" fontName="Ubuntu"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_3n6_A9fzEeOUpbOMsTXMhA"/>
+          <element xmi:type="esb:MediatorFlow" href="sequence_GenericFaultHandle_Sequence.esb#//@server/@children.0/@mediatorFlow"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3n6_BNfzEeOUpbOMsTXMhA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_3n7mEtfzEeOUpbOMsTXMhA" type="3616">
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_3n7mE9fzEeOUpbOMsTXMhA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_3n7mFNfzEeOUpbOMsTXMhA" fontName="Ubuntu"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_3n7mFdfzEeOUpbOMsTXMhA"/>
+          <element xmi:type="esb:SequencesInputConnector" href="sequence_GenericFaultHandle_Sequence.esb#//@server/@children.0/@inputConnector"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3n7mFtfzEeOUpbOMsTXMhA" x="-11" y="-9"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_3n7mF9fzEeOUpbOMsTXMhA" type="3617">
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_3n7mGNfzEeOUpbOMsTXMhA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_3n7mGdfzEeOUpbOMsTXMhA" fontName="Ubuntu"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_3n7mGtfzEeOUpbOMsTXMhA"/>
+          <element xmi:type="esb:SequencesOutputConnector" href="sequence_GenericFaultHandle_Sequence.esb#//@server/@children.0/@outputConnector"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3n7mG9fzEeOUpbOMsTXMhA" x="-11" y="-9"/>
+        </children>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_3n5w4dfzEeOUpbOMsTXMhA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_3n5w4tfzEeOUpbOMsTXMhA" fontName="Ubuntu"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_3n5w49fzEeOUpbOMsTXMhA"/>
+        <element xmi:type="esb:Sequences" href="sequence_GenericFaultHandle_Sequence.esb#//@server/@children.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3n5w5NfzEeOUpbOMsTXMhA" x="-1" y="-1" width="585" height="259"/>
+      </children>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_3ms3AdfzEeOUpbOMsTXMhA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_3ms3AtfzEeOUpbOMsTXMhA" fontName="Ubuntu"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_3ms3A9fzEeOUpbOMsTXMhA"/>
+    <element xmi:type="esb:EsbServer" href="sequence_GenericFaultHandle_Sequence.esb#//@server"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3ms3BNfzEeOUpbOMsTXMhA"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_3jP6YNfzEeOUpbOMsTXMhA"/>
+  <element xmi:type="esb:EsbDiagram" href="sequence_GenericFaultHandle_Sequence.esb#/"/>
+  <edges xmi:type="notation:Connector" xmi:id="_3o9g0NfzEeOUpbOMsTXMhA" type="4001" source="_3n7mF9fzEeOUpbOMsTXMhA" target="_3oFXENfzEeOUpbOMsTXMhA" roundedBendpointsRadius="5" routing="Rectilinear">
+    <styles xmi:type="notation:FontStyle" xmi:id="_3o9g0dfzEeOUpbOMsTXMhA" fontName="Ubuntu"/>
+    <element xmi:type="esb:EsbLink" href="sequence_GenericFaultHandle_Sequence.esb#//@server/@children.0/@outputConnector/@outgoingLink"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_3o9g0tfzEeOUpbOMsTXMhA" points="[6, 9, 0, -17]$[0, 21, -6, -5]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_3pByQNfzEeOUpbOMsTXMhA" type="4001" source="_3oFXFdfzEeOUpbOMsTXMhA" target="_3ocjcNfzEeOUpbOMsTXMhA" roundedBendpointsRadius="5" routing="Rectilinear">
+    <styles xmi:type="notation:FontStyle" xmi:id="_3pByQdfzEeOUpbOMsTXMhA" fontName="Ubuntu"/>
+    <element xmi:type="esb:EsbLink" href="sequence_GenericFaultHandle_Sequence.esb#//@server/@children.0/@mediatorFlow/@children.0/@outputConnector/@outgoingLink"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_3pByQtfzEeOUpbOMsTXMhA" points="[-11, 0, -6, 0]$[1, 0, 6, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_3pFcoNfzEeOUpbOMsTXMhA" type="4001" source="_3odKgNfzEeOUpbOMsTXMhA" target="_3ouQQNfzEeOUpbOMsTXMhA" roundedBendpointsRadius="5" routing="Rectilinear">
+    <styles xmi:type="notation:FontStyle" xmi:id="_3pFcodfzEeOUpbOMsTXMhA" fontName="Ubuntu"/>
+    <element xmi:type="esb:EsbLink" href="sequence_GenericFaultHandle_Sequence.esb#//@server/@children.0/@mediatorFlow/@children.1/@outputConnector/@outgoingLink"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_3pFcotfzEeOUpbOMsTXMhA" points="[-11, 0, -6, 0]$[1, 0, 6, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_3pJuENfzEeOUpbOMsTXMhA" type="4001" source="_3ouQRdfzEeOUpbOMsTXMhA" target="_3n7mEtfzEeOUpbOMsTXMhA" roundedBendpointsRadius="5" routing="Rectilinear">
+    <styles xmi:type="notation:FontStyle" xmi:id="_3pJuEdfzEeOUpbOMsTXMhA" fontName="Ubuntu"/>
+    <element xmi:type="esb:EsbLink" href="sequence_GenericFaultHandle_Sequence.esb#//@server/@children.0/@mediatorFlow/@children.2/@OutputConnector/@outgoingLink"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_3pJuEtfzEeOUpbOMsTXMhA" points="[-1, -9, 0, 17]$[0, -17, 1, 9]"/>
+  </edges>
+</notation:Diagram>

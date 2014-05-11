@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse" name="StubAssetMpxTransformService" transports="http https" startOnLoad="true" trace="disable">
+    <target>
+        <inSequence>
+            <log description="log:input"/>
+            <xslt key="gov:xslt/StubAssetMpxTransformService_Xslt.xslt" description="mpxTransformXslt"/>
+            <log level="full" description="log:afterTransform"/>
+            <header name="To" scope="default" action="remove"/>
+            <property name="RESPONSE" value="true" scope="default" type="STRING"/>
+            <property name="NO_ENTITY_BODY" scope="axis2" action="remove"/>
+            <send/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </target>
+    <publishWSDL key="gov:/wsdl/StubAssetMpxTransformService_Wsdl.wsdl"/>
+</proxy>

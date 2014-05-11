@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>co.nz.skytv.CommonsESBProject</groupId>
+  <artifactId>CommonsESBProject_module</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>CommonsESBProject_module</name>
+  <description>CommonsESBProject_module</description>
+  <modules>
+    <module>artifacts/proxy-service/GenericFileService</module>
+    <module>artifacts/proxy-service/MonitorUtilityService</module>
+    <module>artifacts/sequence/GenericFileService_File_InSequence</module>
+    <module>artifacts/sequence/GenericFileService_Ftp_InSequence</module>
+    <module>artifacts/sequence/MonitorUtilityService_InSequence</module>
+    <module>artifacts/sequence/GenericFaultHandle_Sequence</module>
+    <module>artifacts/local-entry/Certifications</module>
+  </modules>
+</project>

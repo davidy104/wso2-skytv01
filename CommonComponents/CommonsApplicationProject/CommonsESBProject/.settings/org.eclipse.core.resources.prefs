@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+encoding//src/main/graphical-synapse-config/local-entries/localentry_Certifications.esb=UTF-8
+encoding//src/main/graphical-synapse-config/local-entries/localentry_Certifications.esb_diagram=UTF-8
+encoding//src/main/graphical-synapse-config/proxy-services/proxy_GenericFileService.esb=UTF-8
+encoding//src/main/graphical-synapse-config/proxy-services/proxy_GenericFileService.esb_diagram=UTF-8
+encoding//src/main/graphical-synapse-config/proxy-services/proxy_MonitorUtilityService.esb=UTF-8
+encoding//src/main/graphical-synapse-config/proxy-services/proxy_MonitorUtilityService.esb_diagram=UTF-8
+encoding//src/main/graphical-synapse-config/sequences/sequence_GenericFaultHandle_Sequence.esb=UTF-8
+encoding//src/main/graphical-synapse-config/sequences/sequence_GenericFaultHandle_Sequence.esb_diagram=UTF-8
+encoding//src/main/graphical-synapse-config/sequences/sequence_MonitorUtilityService_InSequence.esb=UTF-8
+encoding//src/main/graphical-synapse-config/sequences/sequence_MonitorUtilityService_InSequence.esb_diagram=UTF-8

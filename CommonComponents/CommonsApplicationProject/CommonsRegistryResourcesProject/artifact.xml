@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<artifacts>
+	<artifact name="GenericFileService_File_Endpoint."
+		groupId="co.nz.skytv.CommonsRegistryResourcesProject.resource"
+		version="1.0.0" type="registry/resource" serverRole="GovernanceRegistry">
+		<item>
+			<file>GenericFileService_File_Endpoint.xml</file>
+			<path>/_system/governance/endpoints</path>
+			<mediaType>application/vnd.wso2.esb.endpoint</mediaType>
+		</item>
+	</artifact>
+	<artifact name="GenericFileService_FTP_Endpoint"
+		groupId="co.nz.skytv.CommonsRegistryResourcesProject.resource"
+		version="1.0.0" type="registry/resource" serverRole="GovernanceRegistry">
+		<item>
+			<file>GenericFileService_FTP_Endpoint.xml</file>
+			<path>/_system/governance/endpoints</path>
+			<mediaType>application/vnd.wso2.esb.endpoint</mediaType>
+		</item>
+	</artifact>
+	<artifact name="GenericFileService_Wsdl."
+		groupId="co.nz.skytv.CommonsRegistryResourcesProject.resource"
+		version="1.0.0" type="registry/resource" serverRole="GovernanceRegistry">
+		<item>
+			<file>GenericFileService_Wsdl.wsdl</file>
+			<path>/_system/governance/wsdl</path>
+			<mediaType>application/wsdl+xml</mediaType>
+		</item>
+	</artifact>
+	<artifact name="MonitorUtilityService_Wsdl"
+		groupId="co.nz.skytv.CommonsRegistryResourcesProject.resource"
+		version="1.0.0" type="registry/resource" serverRole="GovernanceRegistry">
+		<item>
+			<file>MonitorUtilityService_Wsdl.wsdl</file>
+			<path>/_system/governance/wsdl</path>
+			<mediaType>application/wsdl+xml</mediaType>
+		</item>
+	</artifact>
+
+</artifacts>

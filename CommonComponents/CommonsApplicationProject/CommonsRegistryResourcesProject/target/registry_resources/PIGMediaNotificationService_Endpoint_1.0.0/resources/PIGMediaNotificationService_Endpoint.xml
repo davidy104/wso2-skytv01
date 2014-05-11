@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint xmlns="http://ws.apache.org/ns/synapse" name="PIGMediaNotificationService_Endpoint">
+    <address uri="http://localhost:8281/pig-ws/rest/qt-mediastate/v1" format="rest"/>
+</endpoint>

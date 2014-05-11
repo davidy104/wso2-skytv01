@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><resource name="GenericFileService_FTP_Endpoint.xml" isCollection="false" path="/_system/governance/endpoints//CommonsRegistryResourcesProject/GenericFileService_FTP_Endpoint.xml" registryUrl="https://localhost:9443/registry" md5="e1b0ce371297e821a410315c366acf16">
+    <mediaType>application/vnd.wso2.esb.endpoint</mediaType>
+    <version>1844</version>
+    <creator>admin</creator>
+    <createdTime>1397446589588</createdTime>
+    <lastUpdater>admin</lastUpdater>
+    <lastModified>1397446589588</lastModified>
+    <registryState>1</registryState>
+    <description/>
+</resource>

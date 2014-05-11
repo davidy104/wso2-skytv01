@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esb:EsbDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:esb="http:///org/wso2/developerstudio/eclipse/gmf/esb">
+  <server type="LOCAL_ENTRY">
+    <children xsi:type="esb:LocalEntry" entryName="Certifications" valueLiteral="G,PG,M,16,18,18+,R20,R20+,R Only,X Adult,XX Adult,XXX Adult"/>
+  </server>
+</esb:EsbDiagram>

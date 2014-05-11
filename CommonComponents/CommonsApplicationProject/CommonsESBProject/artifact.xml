@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="GenericFileService_File_InSequence" groupId="co.nz.skytv.CommonsESBProject.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/GenericFileService_File_InSequence.xml</file>
+    </artifact>
+    <artifact name="GenericFileService_Ftp_InSequence" groupId="co.nz.skytv.CommonsESBProject.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/GenericFileService_Ftp_InSequence.xml</file>
+    </artifact>
+    <artifact name="MonitorUtilityService_InSequence" groupId="co.nz.skytv.CommonsESBProject.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/MonitorUtilityService_InSequence.xml</file>
+    </artifact>
+    <artifact name="GenericFileService" groupId="co.nz.skytv.CommonsESBProject.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/GenericFileService.xml</file>
+    </artifact>
+    <artifact name="MonitorUtilityService" groupId="co.nz.skytv.CommonsESBProject.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/MonitorUtilityService.xml</file>
+    </artifact>
+    <artifact name="GenericFaultHandle_Sequence" groupId="co.nz.skytv.CommonsESBProject.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/GenericFaultHandle_Sequence.xml</file>
+    </artifact>
+    <artifact name="Certifications" groupId="co.nz.skytv.CommonsESBProject.local-entry" version="1.0.0" type="synapse/local-entry" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/local-entries/Certifications.xml</file>
+    </artifact>
+</artifacts>

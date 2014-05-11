@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:ns1="http://service.skytv.co.nz/monitor-utility/v1" xmlns:ns2="http://model.skytv.co.nz/monitor-utility/v1"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	name="MonitorUtilityService" targetNamespace="http://service.skytv.co.nz/monitor-utility/v1">
+	<wsdl:types>
+		<xs:schema targetNamespace="http://service.skytv.co.nz/monitor-utility/v1">
+			<xs:import namespace="http://model.skytv.co.nz/monitor-utility/v1" />
+			<xs:element name="Monitor" type="ns1:Monitor" />
+			<xs:complexType name="Monitor">
+				<xs:sequence>
+					<xs:element minOccurs="1" ref="ns2:MonitorRecord" />
+				</xs:sequence>
+			</xs:complexType>
+		</xs:schema>
+
+		<xs:schema elementFormDefault="qualified"
+			targetNamespace="http://model.skytv.co.nz/monitor-utility/v1">
+			<xs:element name="MonitorRecord" type="ns2:MonitorRecord" />
+			<xs:complexType name="MonitorRecord">
+				<xs:sequence>
+					<xs:element name="serviceName" type="xs:string"
+						maxOccurs="1" minOccurs="1" />
+					<xs:element name="instanceId" type="xs:string"
+						maxOccurs="1" minOccurs="0" />
+
+					<xs:element name="status" type="xs:string" maxOccurs="1"
+						minOccurs="1" />
+
+					<xs:element name="dateTime" type="xs:string" maxOccurs="1"
+						minOccurs="1" />
+
+					<xs:element name="details" maxOccurs="1" minOccurs="1">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:any minOccurs="1" maxOccurs="1" />
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:schema>
+	</wsdl:types>
+
+	<wsdl:message name="MonitorRequest">
+		<wsdl:part name="parameters" element="ns1:Monitor"></wsdl:part>
+	</wsdl:message>
+
+	<wsdl:portType name="MonitorUtilityServicePortType">
+		<wsdl:operation name="Monitor">
+			<wsdl:input message="ns1:MonitorRequest" />
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:binding name="MonitorUtilityServiceSOAPBinding"
+		type="ns1:MonitorUtilityServicePortType">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="Monitor">
+			<soap:operation
+				soapAction="http://service.skytv.co.nz/monitor-utility/v1/Monitor" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="MonitorUtilityService">
+		<wsdl:port name="MonitorUtilityServiceSOAPPort" binding="ns1:MonitorUtilityServiceSOAPBinding">
+			<soap:address location="http://esb.skytv.co.nz/service/MonitorUtilityService" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

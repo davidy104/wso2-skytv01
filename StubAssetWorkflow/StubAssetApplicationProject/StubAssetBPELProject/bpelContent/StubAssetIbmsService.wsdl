@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:ns2="http://model.skytv.co.nz/vod/v1" xmlns:ns1="http://ws.wso2.org/dataservice"
+	xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+	xmlns:ns0="http://service.skytv.co.nz/ibms/v1" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://service.skytv.co.nz/ibms/v1">
+	<wsdl:documentation> StubAssetIbmsService    </wsdl:documentation>
+	<wsdl:types>
+		<xs:schema attributeFormDefault="unqualified"
+			elementFormDefault="qualified" targetNamespace="http://service.skytv.co.nz/ibms/v1">
+			<xs:import namespace="http://model.skytv.co.nz/vod/v1" />
+			<xs:element name="GetVodTitle">
+				<xs:complexType>
+					<xs:sequence />
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="GetVodTitleResponse" type="ns0:GetVodTitleResponse" />
+			<xs:complexType name="GetVodTitleResponse">
+				<xs:sequence>
+					<xs:element minOccurs="0" ref="ns2:Title" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="GetVodTitleByTitleID">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="titleId" nillable="true" type="xs:double" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:schema>
+		<xs:schema attributeFormDefault="unqualified"
+			elementFormDefault="qualified" targetNamespace="http://ws.wso2.org/dataservice">
+			<xs:element name="DataServiceFault" type="xs:string" />
+			<xs:element name="REQUEST_STATUS" type="xs:string" />
+			<xs:element name="DATA_SERVICE_RESPONSE">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:any minOccurs="0" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:schema>
+		<xs:schema attributeFormDefault="unqualified"
+			elementFormDefault="qualified" targetNamespace="http://model.skytv.co.nz/vod/v1">
+			<xs:element name="Title" type="ns2:Title" />
+			<xs:complexType name="Title">
+				<xs:sequence>
+					<xs:element name="titleId" nillable="true" type="xs:long" />
+					<xs:element name="title" nillable="true" type="xs:string" />
+					<xs:element name="episodeNumber" nillable="true" type="xs:long" />
+					<xs:element name="yearOfProduction" nillable="true"
+						type="xs:long" />
+					<xs:element name="type" nillable="true" type="xs:string" />
+					<xs:element name="distributor" nillable="true" type="xs:string" />
+					<xs:element name="contentProviderId" nillable="true"
+						type="xs:long" />
+					<xs:element name="state" nillable="true" type="xs:integer" />
+					<xs:element name="seriesId" nillable="true" type="xs:long" />
+					<xs:element name="seriesName" nillable="true" type="xs:string" />
+					<xs:element name="seriesYear" nillable="true" type="xs:string" />
+					<xs:element name="synopsis" nillable="true" type="xs:string" />
+					<xs:element name="lastUpdateDate" nillable="true" type="xs:string" />
+					<xs:element ref="ns2:casts" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="casts" type="ns2:casts" />
+			<xs:complexType name="casts">
+				<xs:sequence>
+					<xs:element minOccurs="0" ref="ns2:cast" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="cast" type="ns2:cast" />
+			<xs:complexType name="cast">
+				<xs:sequence>
+					<xs:element name="castId" nillable="true" type="xs:long" />
+					<xs:element name="roleId" nillable="true" type="xs:long" />
+					<xs:element name="roleName" nillable="true" type="xs:string" />
+					<xs:element name="firstName" nillable="true" type="xs:string" />
+					<xs:element name="lastName" nillable="true" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="GetVodTitleRequest">
+		<wsdl:part name="parameters" element="ns0:GetVodTitle" />
+	</wsdl:message>
+	<wsdl:message name="GetVodTitleResponse">
+		<wsdl:part name="parameters" element="ns0:GetVodTitleResponse" />
+	</wsdl:message>
+	<wsdl:message name="DataServiceFault">
+		<wsdl:part name="parameters" element="ns1:DataServiceFault" />
+	</wsdl:message>
+	<wsdl:message name="GetVodTitleByTitleIDRequest">
+		<wsdl:part name="parameters" element="ns0:GetVodTitleByTitleID" />
+	</wsdl:message>
+	<wsdl:message name="GetVodTitleByTitleIDResponse">
+		<wsdl:part name="parameters" element="ns0:GetVodTitleResponse" />
+	</wsdl:message>
+	<wsdl:portType name="StubAssetIbmsServicePortType">
+		<wsdl:operation name="GetVodTitle">
+			<wsdl:documentation />
+			<wsdl:input message="ns0:GetVodTitleRequest" wsaw:Action="urn:GetVodTitle" />
+			<wsdl:output message="ns0:GetVodTitleResponse"
+				wsaw:Action="urn:GetVodTitleResponse" />
+			<wsdl:fault message="ns0:DataServiceFault" name="DataServiceFault"
+				wsaw:Action="urn:GetVodTitleDataServiceFault" />
+		</wsdl:operation>
+		<wsdl:operation name="GetVodTitleByTitleID">
+			<wsdl:documentation />
+			<wsdl:input message="ns0:GetVodTitleByTitleIDRequest"
+				wsaw:Action="urn:GetVodTitleByTitleID" />
+			<wsdl:output message="ns0:GetVodTitleByTitleIDResponse"
+				wsaw:Action="urn:GetVodTitleByTitleIDResponse" />
+			<wsdl:fault message="ns0:DataServiceFault" name="DataServiceFault"
+				wsaw:Action="urn:GetVodTitleByTitleIDDataServiceFault" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="StubAssetIbmsServiceSOAP11Binding"
+		type="ns0:StubAssetIbmsServicePortType">
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http"
+			style="document" />
+		<wsdl:operation name="GetVodTitle">
+			<soap:operation soapAction="urn:GetVodTitle" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="DataServiceFault">
+				<soap:fault use="literal" name="DataServiceFault" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="GetVodTitleByTitleID">
+			<soap:operation soapAction="urn:GetVodTitleByTitleID"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="DataServiceFault">
+				<soap:fault use="literal" name="DataServiceFault" />
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:binding name="StubAssetIbmsServiceSOAP12Binding"
+		type="ns0:StubAssetIbmsServicePortType">
+		<soap12:binding transport="http://schemas.xmlsoap.org/soap/http"
+			style="document" />
+		<wsdl:operation name="GetVodTitle">
+			<soap12:operation soapAction="urn:GetVodTitle"
+				style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="DataServiceFault">
+				<soap12:fault use="literal" name="DataServiceFault" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="GetVodTitleByTitleID">
+			<soap12:operation soapAction="urn:GetVodTitleByTitleID"
+				style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="DataServiceFault">
+				<soap12:fault use="literal" name="DataServiceFault" />
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:binding name="StubAssetIbmsServiceHttpBinding" type="ns0:StubAssetIbmsServicePortType">
+		<http:binding verb="POST" />
+		<wsdl:operation name="GetVodTitle">
+			<http:operation location="GetVodTitle" />
+			<wsdl:input>
+				<mime:content type="text/xml" part="parameters" />
+			</wsdl:input>
+			<wsdl:output>
+				<mime:content type="text/xml" part="parameters" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="GetVodTitleByTitleID">
+			<http:operation location="GetVodTitleByTitleID" />
+			<wsdl:input>
+				<mime:content type="text/xml" part="parameters" />
+			</wsdl:input>
+			<wsdl:output>
+				<mime:content type="text/xml" part="parameters" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="StubAssetIbmsService">
+		<wsdl:port name="SOAP11Endpoint" binding="ns0:StubAssetIbmsServiceSOAP11Binding">
+			<soap:address
+				location="http://dss.skytv.co.nz:8280/services/StubAssetIbmsService.SOAP11Endpoint" />
+		</wsdl:port>
+		<wsdl:port name="SecureSOAP11Endpoint" binding="ns0:StubAssetIbmsServiceSOAP11Binding">
+			<soap:address
+				location="https://dss.skytv.co.nz:8243/services/StubAssetIbmsService.SecureSOAP11Endpoint" />
+		</wsdl:port>
+		<wsdl:port name="SecureSOAP12Endpoint" binding="ns0:StubAssetIbmsServiceSOAP12Binding">
+			<soap12:address
+				location="https://dss.skytv.co.nz:8243/services/StubAssetIbmsService.SecureSOAP12Endpoint" />
+		</wsdl:port>
+		<wsdl:port name="SOAP12Endpoint" binding="ns0:StubAssetIbmsServiceSOAP12Binding">
+			<soap12:address
+				location="http://dss.skytv.co.nz:8280/services/StubAssetIbmsService.SOAP12Endpoint" />
+		</wsdl:port>
+		<wsdl:port name="HTTPEndpoint" binding="ns0:StubAssetIbmsServiceHttpBinding">
+			<http:address
+				location="http://dss.skytv.co.nz:8280/services/StubAssetIbmsService.HTTPEndpoint" />
+		</wsdl:port>
+		<wsdl:port name="SecureHTTPEndpoint" binding="ns0:StubAssetIbmsServiceHttpBinding">
+			<http:address
+				location="https://dss.skytv.co.nz:8243/services/StubAssetIbmsService.SecureHTTPEndpoint" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

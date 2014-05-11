@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:esb="http:///org/wso2/developerstudio/eclipse/gmf/esb" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_EVAqwNf2EeOUpbOMsTXMhA" type="Esb" name="task_PubOrchStubIngestTask.esb_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_EVwRoNf2EeOUpbOMsTXMhA" type="2001">
+    <children xmi:type="notation:DecorationNode" xmi:id="_EVwRpdf2EeOUpbOMsTXMhA" type="7001">
+      <children xmi:type="notation:Node" xmi:id="_FqLt8Nf2EeOUpbOMsTXMhA" type="3667">
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_FqLt8df2EeOUpbOMsTXMhA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_FqLt8tf2EeOUpbOMsTXMhA" fontName="Ubuntu"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_FqLt89f2EeOUpbOMsTXMhA"/>
+        <element xmi:type="esb:Task" href="task_PubOrchStubIngestTask.esb#//@server/@children.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FqLt9Nf2EeOUpbOMsTXMhA" width="75" height="75"/>
+      </children>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_EVwRodf2EeOUpbOMsTXMhA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_EVwRotf2EeOUpbOMsTXMhA" fontName="Ubuntu"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_EVwRo9f2EeOUpbOMsTXMhA"/>
+    <element xmi:type="esb:EsbServer" href="task_PubOrchStubIngestTask.esb#//@server"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EVwRpNf2EeOUpbOMsTXMhA"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_EVAqwdf2EeOUpbOMsTXMhA"/>
+  <element xmi:type="esb:EsbDiagram" href="task_PubOrchStubIngestTask.esb#/"/>
+</notation:Diagram>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<artifacts>
+	<artifact name="StubAssetMpxTransformService" groupId="co.nz.skytv.StubAssetESBProject.proxy-service"
+		version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+		<file>src/main/synapse-config/proxy-services/StubAssetMpxTransformService.xml</file>
+	</artifact>
+	<artifact name="PubOrchStubIngestTask" groupId="co.nz.skytv.StubAssetESBProject.task"
+		version="1.0.0" type="synapse/task" serverRole="EnterpriseServiceBus">
+		<file>src/main/synapse-config/tasks/PubOrchStubIngestTask.xml</file>
+	</artifact>
+</artifacts>

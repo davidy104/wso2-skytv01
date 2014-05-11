@@ -1,0 +1,85 @@
+<data name="StubAssetIbmsService" serviceGroup="" serviceNamespace="http://service.skytv.co.nz/ibms/v1">
+    <description>
+    	StubAssetIbmsService
+    </description>
+    <config id="default">
+        <!-- org.h2.Driver;jdbc:h2:tcp://localhost/~/ibms-->
+        <property name="carbon_datasource_name">MilanoPubOrchDataSource</property>
+    </config>
+    <query id="SELECT_ALL_TITLES" useConfig="default">
+        <sql>select 
+        TITLE_ID, PROGRAMME_NAME, EPISODE_NO, 
+        YEAR_OF_PRODUCTION, DEAL_TYPE_DESC, 
+        COMPANY_NAME, COMPANY_ID, MARKED_AS_DELETED, SERIES_ID , SERIES_NAME, SERIES_YEAR, 
+        SYNOPSIS, LAST_UPDATE_DATE from title_view</sql>
+        <result defaultNamespace="http://service.skytv.co.nz/ibms/v1" element="GetVodTitleResponse" rowName="">
+            <element name="Title" namespace="http://model.skytv.co.nz/vod/v1">
+                <element column="title_id" name="titleId" xsdType="xs:long"/>
+                <element column="programme_name" name="title" xsdType="xs:string"/>
+                <element column="episode_no" name="episodeNumber" xsdType="xs:long"/>
+                <element column="year_of_production" name="yearOfProduction" xsdType="xs:long"/>
+                <element column="deal_type_desc" name="type" xsdType="xs:string"/>
+                <element column="company_name" name="distributor" xsdType="xs:string"/>
+                <element column="company_id" name="contentProviderId" xsdType="xs:long"/>
+                <element column="marked_as_deleted" name="state" xsdType="xs:integer"/>
+                <element column="series_id" name="seriesId" xsdType="xs:long"/>
+                <element column="series_name" name="seriesName" xsdType="xs:string"/>
+                <element column="series_year" name="seriesYear" xsdType="xs:string"/>
+                <element column="synopsis" name="synopsis" xsdType="xs:string"/>
+                <element column="LAST_UPDATE_DATE" name="lastUpdateDate" xsdType="xs:string"/>
+                <call-query href="SELECT_CASTS_BY_OBJECT_ID">
+                    <with-param name="titleId" query-param="title_Id"/>
+                </call-query>
+            </element>
+        </result>
+    </query>
+    <query id="SELECT_TITLE_BY_TITLE_ID" useConfig="default">
+        <sql>select 
+        TITLE_ID, PROGRAMME_NAME, EPISODE_NO, 
+        YEAR_OF_PRODUCTION, DEAL_TYPE_DESC, 
+        COMPANY_NAME, COMPANY_ID, MARKED_AS_DELETED, SERIES_ID , SERIES_NAME, SERIES_YEAR, 
+        SYNOPSIS, LAST_UPDATE_DATE from title_view where TITLE_ID =?</sql>
+        <result defaultNamespace="http://service.skytv.co.nz/ibms/v1" element="GetVodTitleResponse" rowName="">
+            <element name="Title" namespace="http://model.skytv.co.nz/vod/v1">
+                <element column="title_id" name="titleId" xsdType="xs:long"/>
+                <element column="programme_name" name="title" xsdType="xs:string"/>
+                <element column="episode_no" name="episodeNumber" xsdType="xs:long"/>
+                <element column="year_of_production" name="yearOfProduction" xsdType="xs:long"/>
+                <element column="deal_type_desc" name="type" xsdType="xs:string"/>
+                <element column="company_name" name="distributor" xsdType="xs:string"/>
+                <element column="company_id" name="contentProviderId" xsdType="xs:long"/>
+                <element column="marked_as_deleted" name="state" xsdType="xs:integer"/>
+                <element column="series_id" name="seriesId" xsdType="xs:long"/>
+                <element column="series_name" name="seriesName" xsdType="xs:string"/>
+                <element column="series_year" name="seriesYear" xsdType="xs:string"/>
+                <element column="synopsis" name="synopsis" xsdType="xs:string"/>
+                <element column="LAST_UPDATE_DATE" name="lastUpdateDate" xsdType="xs:string"/>
+                <call-query href="SELECT_CASTS_BY_OBJECT_ID">
+                    <with-param name="titleId" query-param="titleId"/>
+                </call-query>
+            </element>
+        </result>
+        <param name="titleId" ordinal="1" sqlType="DOUBLE"/>
+    </query>
+    <query id="SELECT_CASTS_BY_OBJECT_ID" useConfig="default">
+        <sql>select CAST_ID, ROLE_ID, ROLENAME, CAST_ORDER, FIRSTNAME, LASTNAME from cast_view where object_id =?</sql>
+        <result defaultNamespace="http://model.skytv.co.nz/vod/v1" element="casts" rowName="">
+            <element name="cast" namespace="http://model.skytv.co.nz/vod/v1">
+                <element column="cast_id" name="castId" xsdType="xs:long"/>
+                <element column="role_id" name="roleId" xsdType="xs:long"/>
+                <element column="rolename" name="roleName" xsdType="xs:string"/>
+                <element column="firstname" name="firstName" xsdType="xs:string"/>
+                <element column="lastname" name="lastName" xsdType="xs:string"/>
+            </element>
+        </result>
+        <param name="titleId" ordinal="1" sqlType="DOUBLE"/>
+    </query>
+    <operation name="GetVodTitleByTitleID">
+        <call-query href="SELECT_TITLE_BY_TITLE_ID">
+            <with-param name="titleId" query-param="titleId"/>
+        </call-query>
+    </operation>
+    <operation name="GetVodTitle">
+        <call-query href="SELECT_ALL_TITLES"/>
+    </operation>
+</data>

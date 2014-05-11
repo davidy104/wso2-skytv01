@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<task xmlns="http://ws.apache.org/ns/synapse" name="PubOrchStubIngestTask" class="org.apache.synapse.startup.tasks.MessageInjector" group="synapse.simple.quartz">
+    <trigger count="1" interval="1000"/>
+    <property xmlns:task="http://www.wso2.org/products/wso2commons/tasks" name="message">
+        <ns1:ExtractTitles xmlns:ns1="http://process.skytv.co.nz/puborch-extracttitles/v1">
+            <!-- provided titleId is only for testing -->
+            <titleId xmlns="http://process.skytv.co.nz/puborch-extracttitles/v1"/>
+        </ns1:ExtractTitles>
+    </property>
+    <property xmlns:task="http://www.wso2.org/products/wso2commons/tasks" name="to" value="http://bps.skytv.co.nz:9763/services/StubAssetProcess"/>
+    <property xmlns:task="http://www.wso2.org/products/wso2commons/tasks" name="format" value="soap11"/>
+    <property xmlns:task="http://www.wso2.org/products/wso2commons/tasks" name="soapAction" value="process"/>
+</task>

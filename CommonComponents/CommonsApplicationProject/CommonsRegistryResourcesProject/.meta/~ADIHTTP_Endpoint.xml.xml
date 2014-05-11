@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><resource name="ADIHTTP_Endpoint.xml" isCollection="false" path="/_system/governance/endpoints//CommonsRegistryResourcesProject/ADIHTTP_Endpoint.xml" registryUrl="https://localhost:9443/registry" md5="a6c46c06dde8c0f61a3045f6ae4e37f0">
+    <mediaType>application/vnd.wso2.esb.endpoint</mediaType>
+    <version>1844</version>
+    <creator>admin</creator>
+    <createdTime>1397538300988</createdTime>
+    <lastUpdater>admin</lastUpdater>
+    <lastModified>1397538300988</lastModified>
+    <registryState>1</registryState>
+    <description/>
+</resource>

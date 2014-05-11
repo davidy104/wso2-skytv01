@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><resource name="PIGMediaNotificationService_Endpoint.xml" isCollection="false" path="/_system/governance/endpoints//CommonsRegistryResourcesProject/PIGMediaNotificationService_Endpoint.xml" registryUrl="https://localhost:9443/registry" md5="e972b6466b50b08882ca12daae6fcf12">
+    <mediaType>application/vnd.wso2.esb.endpoint</mediaType>
+    <version>1844</version>
+    <creator>admin</creator>
+    <createdTime>1398140921091</createdTime>
+    <lastUpdater>admin</lastUpdater>
+    <lastModified>1398140921091</lastModified>
+    <registryState>1</registryState>
+    <description/>
+</resource>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse" name="GenericFileService" transports="http https" startOnLoad="true" trace="disable">
+    <target>
+        <inSequence>
+            <log level="full">
+                <property name="GenericFileService" value="FileService"/>
+            </log>
+            <property xmlns:ns1="https://service.skytv.co.nz/puborch-fileService/v1" name="destination" expression="//ns1:SendToFileServiceRequest/destination" scope="default" type="STRING"/>
+            <property xmlns:ns1="https://service.skytv.co.nz/puborch-fileService/v1" name="filename" expression="//ns1:SendToFileServiceRequest/fileName" scope="default" type="STRING"/>
+            <enrich>
+                <source xmlns:ns1="https://service.skytv.co.nz/puborch-fileService/v1" clone="true" xpath="//ns1:SendToFileServiceRequest/contents/*"/>
+                <target type="body"/>
+            </enrich>
+            <log>
+                <property name="---file contents---" value="$body"/>
+            </log>
+            <property name="OUT_ONLY" value="true" scope="default" type="STRING"/>
+            <switch source="get-property('destination')">
+                <case regex="FILE">
+                    <sequence key="GenericFileService_File_InSequence"/>
+                </case>
+                <case regex="FTP">
+                    <sequence key="GenericFileService_Ftp_InSequence"/>
+                </case>
+                <default/>
+            </switch>
+            <payloadFactory media-type="xml">
+                <format>
+                    <ns1:SendToFileServiceResponse xmlns:ns1="https://service.skytv.co.nz/puborch-fileService/v1">
+                        <result>success</result>
+                    </ns1:SendToFileServiceResponse>
+                </format>
+                <args/>
+            </payloadFactory>
+            <header name="To" scope="default" action="remove"/>
+            <property name="RESPONSE" value="true" scope="default" type="STRING"/>
+            <property name="NO_ENTITY_BODY" scope="axis2" action="remove"/>
+            <send/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </target>
+    <publishWSDL key="gov:/wsdl/GenericFileService_Wsdl.wsdl"/>
+</proxy>

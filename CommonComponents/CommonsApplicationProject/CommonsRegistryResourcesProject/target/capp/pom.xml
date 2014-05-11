@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>co.nz.skytv.CommonsRegistryResourcesProject</groupId>
+  <artifactId>CommonsRegistryResourcesProject_module</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>CommonsRegistryResourcesProject_module</name>
+  <description>CommonsRegistryResourcesProject_module</description>
+  <modules>
+    <module>artifacts/resource/GenericFileService_File_Endpoint.</module>
+    <module>artifacts/resource/GenericFileService_FTP_Endpoint</module>
+    <module>artifacts/resource/GenericFileService_Wsdl.</module>
+    <module>artifacts/resource/MonitorUtilityService_Wsdl</module>
+  </modules>
+</project>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:esb="http:///org/wso2/developerstudio/eclipse/gmf/esb" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_-ROt0MOFEeORu7s52h3DaQ" type="Esb" name="endpoint_GenericFileService_FTP_Endpoint.esb_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_-U7iEMOFEeORu7s52h3DaQ" type="2001">
+    <children xmi:type="notation:DecorationNode" xmi:id="_-U7iFcOFEeORu7s52h3DaQ" type="7001"/>
+    <children xmi:type="notation:Shape" xmi:id="_EPtl8Nf0EeOUpbOMsTXMhA" type="3642" fontName="Ubuntu">
+      <children xmi:type="notation:BasicCompartment" xmi:id="_EPtl8tf0EeOUpbOMsTXMhA" type="7041">
+        <children xmi:type="notation:Node" xmi:id="_EPwpQNf0EeOUpbOMsTXMhA" type="3646">
+          <children xmi:type="notation:DecorationNode" xmi:id="_EPwpRdf0EeOUpbOMsTXMhA" type="5161"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_EPwpQdf0EeOUpbOMsTXMhA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_EPwpQtf0EeOUpbOMsTXMhA" fontName="Ubuntu"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_EPwpQ9f0EeOUpbOMsTXMhA"/>
+          <element xmi:type="esb:AddressEndPoint" href="endpoint_GenericFileService_FTP_Endpoint.esb#//@server/@children.0/@child"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EPwpRNf0EeOUpbOMsTXMhA" width="75" height="75"/>
+        </children>
+        <styles xmi:type="notation:TitleStyle" xmi:id="_EPtl89f0EeOUpbOMsTXMhA" showTitle="true"/>
+      </children>
+      <element xmi:type="esb:EndpointDiagram" href="endpoint_GenericFileService_FTP_Endpoint.esb#//@server/@children.0"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EPtl8df0EeOUpbOMsTXMhA" width="110" height="100"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_-U7iEcOFEeORu7s52h3DaQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_-U7iEsOFEeORu7s52h3DaQ" fontName="Ubuntu"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_-U7iE8OFEeORu7s52h3DaQ"/>
+    <element xmi:type="esb:EsbServer" href="endpoint_GenericFileService_FTP_Endpoint.esb#//@server"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-U7iFMOFEeORu7s52h3DaQ"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_-ROt0cOFEeORu7s52h3DaQ"/>
+  <element xmi:type="esb:EsbDiagram" href="endpoint_GenericFileService_FTP_Endpoint.esb#/"/>
+</notation:Diagram>

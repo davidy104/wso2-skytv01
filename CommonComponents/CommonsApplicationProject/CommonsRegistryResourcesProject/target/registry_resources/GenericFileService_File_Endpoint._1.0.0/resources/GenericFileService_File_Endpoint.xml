@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint xmlns="http://ws.apache.org/ns/synapse" name="GenericFileService_File_Endpoint">
+    <address uri="vfs:file:///home/david/mywork/sky/test/sharingfolder?transport.vfs.Append=false" format="pox"/>
+</endpoint>

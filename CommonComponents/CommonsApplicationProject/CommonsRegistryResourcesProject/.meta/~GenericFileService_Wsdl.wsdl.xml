@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><resource name="GenericFileService_Wsdl.wsdl" isCollection="false" path="/_system/governance/wsdl//CommonsRegistryResourcesProject/GenericFileService_Wsdl.wsdl" registryUrl="https://localhost:9443/registry" md5="dab7889bdf41b7c7d306ad364cf2a69c">
+    <mediaType>application/wsdl+xml</mediaType>
+    <version>1844</version>
+    <creator>admin</creator>
+    <createdTime>1397446640860</createdTime>
+    <lastUpdater>admin</lastUpdater>
+    <lastModified>1397446640860</lastModified>
+    <registryState>1</registryState>
+    <description/>
+</resource>
